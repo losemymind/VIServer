@@ -4,7 +4,10 @@
   <PropertyGroup Label="UserMacros">
     <SOURCE_ROOT>$(ProjectDir)../Classes/</SOURCE_ROOT>
   </PropertyGroup>
-  <PropertyGroup />
+  <PropertyGroup>
+    <IntDir>$(SolutionDir)publish/Temp/$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)publish/$(Configuration)\</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
