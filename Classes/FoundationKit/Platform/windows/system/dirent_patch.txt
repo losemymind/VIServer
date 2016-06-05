@@ -1,0 +1,41 @@
++#ifndef _MSC_VER
++#error "Use this header only with Microsoft Visual C++ compiles!."
++#endif
+#ifndef DIRENT_H
+#define DIRENT_H
++#include "FoundationKit/GenericPlatformMacros.h"
++#if (TARGET_PLATFORM ==PLATFORM_WIN32 )
++#pragma warning( push )  
++#pragma warning( disable : 4505 ) 
++#include <locale>
+
+    static int
+        dirent_mbstowcs_s(
+        size_t *pReturnValue,
+        wchar_t *wcstr,
+        size_t sizeInWords,
+        const char *mbstr,
+        size_t count)
+    {
+        int error;
++        std::locale old_loc = std::locale::global(std::locale(""));
+
+#endif
++        std::locale::global(old_loc);
+        return error;
+
+
+    static int
+        dirent_wcstombs_s(
+        size_t *pReturnValue,
+        char *mbstr,
+        size_t sizeInBytes, /* max size of mbstr */
+        const wchar_t *wcstr,
+        size_t count)
+    {
+        int error;
++        std::locale old_loc = std::locale::global(std::locale(""));
+
+#endif
++        std::locale::global(old_loc);
+        return error;

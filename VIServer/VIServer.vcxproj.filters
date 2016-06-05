@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{a35a63cd-77a8-4a40-ae75-2c2e158f35f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Networking">
+      <UniqueIdentifier>{9a198d4a-0aa9-4f91-8b59-a0639eb55d4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\FoundationKit">
+      <UniqueIdentifier>{11660fbf-0eee-41aa-9527-1bcc0bd9f403}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\FoundationKit\Base">
+      <UniqueIdentifier>{7263a859-6b0c-47a9-a92e-ea4064decffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\FoundationKit\Foundation">
+      <UniqueIdentifier>{31557a42-31fe-409c-96a8-8b934acbfb82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\FoundationKit\external">
+      <UniqueIdentifier>{c9dc7a92-6656-4e10-9353-46d381de1497}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\FoundationKit\external\ConvertUTF">
+      <UniqueIdentifier>{42bf4d3c-2016-4c7c-9deb-c7091a87621e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\FoundationKit\Platform">
+      <UniqueIdentifier>{6aa2c1b0-22e2-4999-b03a-95fc5f7eab87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\FoundationKit\Platform\windows">
+      <UniqueIdentifier>{e24ee0fd-ef6c-4993-b352-7fbe64f657a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\FoundationKit\Crypto">
+      <UniqueIdentifier>{9be781a1-5cb6-4aa8-982c-8fc1ca68ca37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\FoundationKit\external\unzip">
+      <UniqueIdentifier>{ec8ffae8-f1f6-4eb9-b3fd-9d00b337789d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\Networking\Socket.cpp">
+      <Filter>Classes\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Networking\SocketBSD.cpp">
+      <Filter>Classes\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\GenericPlatformMacros.cpp">
+      <Filter>Classes\FoundationKit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Foundation\StringUtils.cpp">
+      <Filter>Classes\FoundationKit\Foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\external\ConvertUTF\ConvertUTF.c">
+      <Filter>Classes\FoundationKit\external\ConvertUTF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\external\ConvertUTF\ConvertUTFWrapper.cpp">
+      <Filter>Classes\FoundationKit\external\ConvertUTF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Base\Timespan.cpp">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Base\MathEx.cpp">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Foundation\Logger.cpp">
+      <Filter>Classes\FoundationKit\Foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Base\DateTime.cpp">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Platform\FileUtils.cpp">
+      <Filter>Classes\FoundationKit\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Platform\Platform.cpp">
+      <Filter>Classes\FoundationKit\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Platform\windows\EnvironmentWindows.cpp">
+      <Filter>Classes\FoundationKit\Platform\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Platform\windows\FileUtils_win32.cpp">
+      <Filter>Classes\FoundationKit\Platform\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Platform\windows\PlatformWindows.cpp">
+      <Filter>Classes\FoundationKit\Platform\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Platform\windows\ProtectedMemoryAllocator.cpp">
+      <Filter>Classes\FoundationKit\Platform\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Crypto\aes.cpp">
+      <Filter>Classes\FoundationKit\Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Crypto\Base64.cpp">
+      <Filter>Classes\FoundationKit\Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\main.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Foundation\Exception.cpp">
+      <Filter>Classes\FoundationKit\Foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Base\Data.cpp">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\external\unzip\ioapi.cpp">
+      <Filter>Classes\FoundationKit\external\unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\external\unzip\ioapi_mem.cpp">
+      <Filter>Classes\FoundationKit\external\unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\external\unzip\unzip.cpp">
+      <Filter>Classes\FoundationKit\external\unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\VIServer.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Base\TimeEx.cpp">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Networking\StaticMember.cpp">
+      <Filter>Classes\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Networking\IProtocol.cpp">
+      <Filter>Classes\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Base\DataStream.cpp">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\NetworkProtocols.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ConnectionManager.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\FoundationKit\Foundation\unique_id.cpp">
+      <Filter>Classes\FoundationKit\Foundation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\Networking\Socket.h">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\SocketBSD.h">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\GenericPlatformMacros.h">
+      <Filter>Classes\FoundationKit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Base\Types.h">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\StringUtils.h">
+      <Filter>Classes\FoundationKit\Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\external\ConvertUTF\ConvertUTF.h">
+      <Filter>Classes\FoundationKit\external\ConvertUTF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Base\Timespan.h">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Base\MathContent.h">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Base\MathEx.h">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\Logger.h">
+      <Filter>Classes\FoundationKit\Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\Singleton.h">
+      <Filter>Classes\FoundationKit\Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Base\noncopyable.hpp">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Base\DateTime.h">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Platform\Environment.h">
+      <Filter>Classes\FoundationKit\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Platform\FileUtils.h">
+      <Filter>Classes\FoundationKit\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Platform\OpenGL.h">
+      <Filter>Classes\FoundationKit\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Platform\Platform.h">
+      <Filter>Classes\FoundationKit\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Platform\windows\ProtectedMemoryAllocator.h">
+      <Filter>Classes\FoundationKit\Platform\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Platform\windows\ProtectedMemoryAllocatorTest.h">
+      <Filter>Classes\FoundationKit\Platform\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Crypto\aes.h">
+      <Filter>Classes\FoundationKit\Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Crypto\Base64.h">
+      <Filter>Classes\FoundationKit\Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Crypto\md5.hpp">
+      <Filter>Classes\FoundationKit\Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Crypto\sha1.hpp">
+      <Filter>Classes\FoundationKit\Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\IPAddressBSD.h">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\config.hpp">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\pop_options.hpp">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\push_options.hpp">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\socket_types.hpp">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\old_win_sdk_compat.hpp">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\TcpListener.h">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\IPv4Endpoint.h">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\IPv4Address.h">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\ByteSwap.h">
+      <Filter>Classes\FoundationKit\Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\TcpSocketBuilder.h">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\Exception.h">
+      <Filter>Classes\FoundationKit\Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Base\Data.h">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\external\unzip\ioapi.h">
+      <Filter>Classes\FoundationKit\external\unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\external\unzip\ioapi_mem.h">
+      <Filter>Classes\FoundationKit\external\unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\external\unzip\unzip.h">
+      <Filter>Classes\FoundationKit\external\unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\VIServer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Base\TimeEx.h">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\unique_id.hpp">
+      <Filter>Classes\FoundationKit\Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\winsock_init.hpp">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Networking\IProtocol.h">
+      <Filter>Classes\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Base\DataStream.h">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\NetworkProtocols.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ClientProtocolDefines.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ServerProtocolDefines.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ConnectionManager.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoundationKit\Base\Timer.h">
+      <Filter>Classes\FoundationKit\Base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Classes\Networking\winsock_init.ipp">
+      <Filter>Classes\Networking</Filter>
+    </None>
+  </ItemGroup>
+</Project>

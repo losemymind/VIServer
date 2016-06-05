@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{472B1E39-7F8A-4E48-B840-1009C7705F63}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>VIServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Generic.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Generic.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreLinkEvent>
+      <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
+xcopy /Y /Q "$(ProjectDir)..\Classes\FoundationKit\external\zlib\*.dll" "$(OutDir)"
+xcopy /Y /Q "$(ProjectDir)..\Classes\FoundationKit\external\zlib\*.lib" "$(OutDir)"</Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreLinkEvent>
+      <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
+xcopy /Y /Q "$(ProjectDir)..\Classes\FoundationKit\external\zlib\*.dll" "$(OutDir)"
+xcopy /Y /Q "$(ProjectDir)..\Classes\FoundationKit\external\zlib\*.lib" "$(OutDir)"</Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\ConnectionManager.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Base\Data.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Base\DataStream.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Base\DateTime.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Base\MathEx.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Base\TimeEx.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Base\Timespan.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Crypto\aes.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Crypto\Base64.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\external\ConvertUTF\ConvertUTF.c" />
+    <ClCompile Include="..\Classes\FoundationKit\external\ConvertUTF\ConvertUTFWrapper.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\external\unzip\ioapi.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\external\unzip\ioapi_mem.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\external\unzip\unzip.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Foundation\Exception.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Foundation\Logger.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Foundation\StringUtils.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Foundation\unique_id.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\GenericPlatformMacros.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Platform\FileUtils.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Platform\Platform.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Platform\windows\EnvironmentWindows.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Platform\windows\FileUtils_win32.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Platform\windows\PlatformWindows.cpp" />
+    <ClCompile Include="..\Classes\FoundationKit\Platform\windows\ProtectedMemoryAllocator.cpp" />
+    <ClCompile Include="..\Classes\main.cpp" />
+    <ClCompile Include="..\Classes\Networking\IProtocol.cpp" />
+    <ClCompile Include="..\Classes\Networking\Socket.cpp" />
+    <ClCompile Include="..\Classes\Networking\SocketBSD.cpp" />
+    <ClCompile Include="..\Classes\Networking\StaticMember.cpp" />
+    <ClCompile Include="..\Classes\NetworkProtocols.cpp" />
+    <ClCompile Include="..\Classes\VIServer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\ClientProtocolDefines.h" />
+    <ClInclude Include="..\Classes\ConnectionManager.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Base\Data.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Base\DataStream.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Base\DateTime.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Base\MathContent.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Base\MathEx.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Base\noncopyable.hpp" />
+    <ClInclude Include="..\Classes\FoundationKit\Base\TimeEx.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Base\Timer.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Base\Timespan.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Base\Types.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Crypto\aes.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Crypto\Base64.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Crypto\md5.hpp" />
+    <ClInclude Include="..\Classes\FoundationKit\Crypto\sha1.hpp" />
+    <ClInclude Include="..\Classes\FoundationKit\external\ConvertUTF\ConvertUTF.h" />
+    <ClInclude Include="..\Classes\FoundationKit\external\unzip\ioapi.h" />
+    <ClInclude Include="..\Classes\FoundationKit\external\unzip\ioapi_mem.h" />
+    <ClInclude Include="..\Classes\FoundationKit\external\unzip\unzip.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\ByteSwap.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\Exception.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\Logger.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\Singleton.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\StringUtils.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Foundation\unique_id.hpp" />
+    <ClInclude Include="..\Classes\FoundationKit\GenericPlatformMacros.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Platform\Environment.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Platform\FileUtils.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Platform\OpenGL.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Platform\Platform.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Platform\windows\ProtectedMemoryAllocator.h" />
+    <ClInclude Include="..\Classes\FoundationKit\Platform\windows\ProtectedMemoryAllocatorTest.h" />
+    <ClInclude Include="..\Classes\Networking\config.hpp" />
+    <ClInclude Include="..\Classes\Networking\IPAddressBSD.h" />
+    <ClInclude Include="..\Classes\Networking\IProtocol.h" />
+    <ClInclude Include="..\Classes\Networking\IPv4Address.h" />
+    <ClInclude Include="..\Classes\Networking\IPv4Endpoint.h" />
+    <ClInclude Include="..\Classes\Networking\old_win_sdk_compat.hpp" />
+    <ClInclude Include="..\Classes\Networking\pop_options.hpp" />
+    <ClInclude Include="..\Classes\Networking\push_options.hpp" />
+    <ClInclude Include="..\Classes\Networking\Socket.h" />
+    <ClInclude Include="..\Classes\Networking\SocketBSD.h" />
+    <ClInclude Include="..\Classes\Networking\socket_types.hpp" />
+    <ClInclude Include="..\Classes\Networking\TcpListener.h" />
+    <ClInclude Include="..\Classes\Networking\TcpSocketBuilder.h" />
+    <ClInclude Include="..\Classes\Networking\winsock_init.hpp" />
+    <ClInclude Include="..\Classes\NetworkProtocols.h" />
+    <ClInclude Include="..\Classes\ServerProtocolDefines.h" />
+    <ClInclude Include="..\Classes\VIServer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Classes\Networking\winsock_init.ipp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
