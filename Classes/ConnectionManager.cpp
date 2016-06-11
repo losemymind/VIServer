@@ -24,16 +24,23 @@ ConnectionManager::~ConnectionManager()
 
 }
 
+// 启动控制端连接监听器
 bool ConnectionManager::Startup()
 {
+    // 如果已经启动了，那么什么也不做
     if (_bStartup)return true;
+    // 创建一个TCP监听器监听控制端连接
+    // LISTENSERVER_DEFAULT_ENDPOINT为监听的IP地址和端口。
     _tcpListener = new TcpListener(LISTENSERVER_DEFAULT_ENDPOINT);
+    // 绑定处理客户端连接进来的函数，当有客户端连接进来，TcpListener会调用 
+    // HandleListenerConnectionAccepted方法。
     _tcpListener->OnConnectionAccepted() = std::bind(&ConnectionManager::HandleListenerConnectionAccepted, this, std::placeholders::_1, std::placeholders::_2);
     _bStartup = true;
     LOG_INFO(">>Server listen endpoint[%s]", _tcpListener->GetLocalEndpoint().ToString().c_str());
     return true;
 }
 
+// 连接管理器关闭函数，在这里出来资源释放。
 void ConnectionManager::Shutdown()
 {
     _tcpListener->Stop();
@@ -45,6 +52,7 @@ void ConnectionManager::Shutdown()
     _bStartup = false;
 }
 
+// 接收并处理客户端消息
 void ConnectionManager::update(float deltaTime)
 {
     std::unique_lock<std::mutex> uniqueLock(_addClientMutex);
@@ -85,6 +93,7 @@ void ConnectionManager::update(float deltaTime)
     }
 }
 
+// 处理客户端连接进来
 bool ConnectionManager::HandleListenerConnectionAccepted(Socket* ClientSocket, const IPv4Endpoint& ClientEndpoint)
 {
     std::lock_guard<std::mutex>   lockClient(_addClientMutex);
@@ -92,6 +101,7 @@ bool ConnectionManager::HandleListenerConnectionAccepted(Socket* ClientSocket, c
     return true;
 }
 
+// 处理客户端断开
 void ConnectionManager::HandleClientDisconnected(uint64 clientId)
 {
     std::lock_guard<std::mutex>   lockClient(_addClientMutex);
@@ -102,6 +112,7 @@ void ConnectionManager::HandleClientDisconnected(uint64 clientId)
     }
 }
 
+// 根据客户端ID返回客户端对象
 Socket* ConnectionManager::getClientByID(uint64 clientId)
 {
     std::lock_guard<std::mutex>   lockClient(_addClientMutex);

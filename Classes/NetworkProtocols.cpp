@@ -5,6 +5,9 @@
 #include "VIServer.h"
 #include "ClientProtocolDefines.h"
 #include "ConnectionManager.h"
+
+
+// ÁÄÌìĞ­Òé
 class ClientChat : IProtocol
 {
 public:

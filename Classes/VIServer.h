@@ -1,45 +1,74 @@
 
+/**
+ * 服务器处理逻辑，保护的功能：
+ * 1.处理控制台输入的命令。
+ * 2.接受和处理控制端网络连接
+ * 3.接受和处理设备端网络连接。
+ */
+
 #pragma once
+// 线程库
 #include <thread>
+// 互斥对象库
 #include <mutex>
+// 链表
 #include <list>
+// 字符串库
 #include <string>
+// unordered_map库
 #include <unordered_map>
+// 函数库
 #include <functional>
+// 处理平台相关
 #include "FoundationKit/GenericPlatformMacros.h"
+// 单例模板对象
 #include "FoundationKit/Foundation/Singleton.h"
+// TCP连接监听器
 #include "Networking/TcpListener.h"
+// IPv4 地址帮助类
 #include "Networking/IPv4Address.h"
+// IPv4 地址帮助类
 #include "Networking/IPv4Endpoint.h"
+// 基础socket
 #include "Networking/SocketBSD.h"
 
 USING_NS_FK;
 
+// 通过模板类Singleton定义VIServer为单例对象
 class VIServer : public Singleton<VIServer>
 {
+    //将VIServer的构造函数设置为private，避免别人创建VIServer
     VIServer();
+    // 使用友元，让Singleton类可以调用VIServer的构造函数
     friend Singleton<VIServer>;
 public:
+    // 定义别名，用来保存控制台命令列表和命令执行的函数。
     typedef std::unordered_map<std::string, std::function<void()> > CommandMap;
 
-
+    // VIServer析构函数，在这里执行内存释放。
     ~VIServer();
+
+    // 初始化服务器
     void setup();
+
+    // 更新服务器逻辑
     void update(bool& bExit);
 
     // 将控制台输入的命令保存到 _commandList, 主线程
-    // 回去读取这些命令去执行.
+    // 会去读取这些命令去执行.
     void pushMessage(std::string& comMsg);
+
+    // 设置服务器是否要退出
     void setExit(bool bExit);
+    // 获取服务器是否退出
     bool getExit();
 
-    //服务器命令
-
+    //=========服务器命令函数=============
+    // 启动服务器
     void start();
+    // 停止服务器
     void stop();
-
-
-
+    
 private:
     // 计算每帧运行的时间
     void calculateDeltaTime();
